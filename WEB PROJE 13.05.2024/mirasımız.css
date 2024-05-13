@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.heritage-info {
+    margin: 20px;
+}
+
+.heritage-info h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.gallery {
+    padding: 20px;
+    
+}
+
+.gallery h2{
+    text-align: center;
+    color: rgb(8, 13, 14);
+    font-size:50px ;
+
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+}
+
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.slide img {
+    width: 500px;
+    height: 300px;
+    margin-left: 10px; /* Resimler arası boşluk */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+}
+
+/* İçerik bloğu genelinde stil */
+.col-6 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+/* Etiket stil */
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Bilgi stil */
+span {
+    flex-grow: 1;
+}
+
+/* Bağlantı stil */
+span a {
+    color: blue;
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration: underline;
+}
+
+
+.gallery {
+    max-width: 1200px; /* Galeri genişliği */
+    margin: 0 auto; /* Ortala */
+}
+
+.image-container {
+    display: flex; /* Resimleri yatayda sırala */
+    flex-wrap: wrap; /* Yatay sıralama, satır dolduğunda alt satıra geç */
+    justify-content: space-between; /* Resimler arasında boşluk bırakarak sırala */
+}
+
+.image {
+    width: calc(50% - 10px); /* Resimlerin yarısı kadar genişlik (50% - 10px margin) */
+    margin-bottom: 20px; /* Resimler arası boşluk */
+    text-align: center; /* Resimleri merkezde hizala */
+}
+
+
+.image img {
+    width: 500px; /* Resimlerin genişliğini %100 yap */
+    height: auto; /* Oranları koru */
+}
+
+.image-caption {
+    text-align: center; /* Metni merkezle */
+}
+nav ul li a i {
+    margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
+}
+
+
+
+
+
+
+
+

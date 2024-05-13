@@ -1,0 +1,117 @@
+/* Genel stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    margin-bottom:5px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Yazı ve ikon arasındaki genel boşluğu ayarlar */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    margin-right: 5px; /* Yazı ile ikon arasındaki mesafeyi ayarlar */
+    display: inline-flex; /* İçeriği yatay hizalar */
+    align-items: center; /* İçeriği dikeyde hizalar */
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a i {
+    margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
+}
+
+
+
+.about-me {
+    padding: 20px;
+}
+
+.about-me h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.slide img {
+    width: 400px;
+    height: 300px;
+    margin-left:20px ;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+.slide img {
+    max-width: 100%;
+    max-height: 250px;
+}
