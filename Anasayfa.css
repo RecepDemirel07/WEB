@@ -22,6 +22,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2em;
+    margin-bottom:5px;
     letter-spacing: 2px;
 }
 
@@ -33,7 +34,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 20px; /* Yazı ve ikon arasındaki genel boşluğu ayarlar */
 }
 
 nav ul li a {
@@ -41,11 +42,20 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s ease;
+    margin-right: 5px; /* Yazı ile ikon arasındaki mesafeyi ayarlar */
+    display: inline-flex; /* İçeriği yatay hizalar */
+    align-items: center; /* İçeriği dikeyde hizalar */
 }
 
 nav ul li a:hover {
     color: #ffcc00;
 }
+
+nav ul li a i {
+    margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
+}
+
+
 
 .about-me {
     padding: 20px;
@@ -79,8 +89,9 @@ nav ul li a:hover {
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 300px;
+    margin-left:20px ;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -103,4 +114,104 @@ footer p {
 .slide img {
     max-width: 100%;
     max-height: 250px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.kutu {
+    width: 45%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 20px; /* Oval şekilde kutu yapmak için */
+}
+
+.kutu h2 {
+    margin-top: 0;
+}
+
+.kutu p {
+    margin-bottom: 0;
+}
+.Oyunlar {
+    text-align: center;
+}
+
+.oyunlar-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.oyun {
+    width: 30%;
+}
+
+.oyun img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.oyun p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.genel-kutu {
+    text-align: center; /* Başlığın ortalanması için */
+}
+
+.kitap-kutusu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kitap {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ddd; /* Kutu kenarlarının belirginliği için border eklendi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 520px; /* Genişlik artırıldı */
+    display: flex; /* Eklenen özellik */
+    align-items: center; /* Eklenen özellik */
+    transition: transform 0.3s ease;
+}
+
+.kitap:hover {
+    transform: translateY(-5px);
+}
+
+.kitap img {
+    width: 150px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; /* Yeni eklenen özellik */
+    object-fit: cover;
+}
+
+.aciklama {
+    font-size: 14px;
+    color: #333; /* Yazı rengi daha koyu yapıldı */
+    padding: 10px;
+    text-align: left; /* Açıklama metninin hizalaması sola kaydırıldı */
+    flex-grow: 1; /* Açıklamanın geri kalan boşluğu kaplaması için eklenen özellik */
+    margin-left: 10px; /* Resim ve açıklama arasındaki boşluk */
+}
+
+.kitap h2 {
+    color: #333; /* Kitap başlığının yazı rengi daha koyu yapıldı */
+}
+
+.resim {
+    flex: 0 0 150px; /* Resmin sabit genişliği */
 }

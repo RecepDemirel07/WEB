@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -55,7 +55,7 @@ nav ul li a {
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 8px;
     margin-right: 10px;
 }
@@ -65,4 +65,11 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+}
+.city-info h2{
+    text-align: center;
+
+}
+nav ul li a i {
+    margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
 }

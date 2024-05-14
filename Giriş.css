@@ -33,6 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+  
 }
 
 .login-form {
@@ -41,6 +42,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    background-color: rgba(255, 255, 255, 0.25); /* Beyaz renk ve %50 saydamlık */
 }
 
 .login-heading {
@@ -86,3 +88,13 @@ body {
     font-size: 14px;
     text-align: center;
 }
+
+.background-image {
+    background-image: url('Resimler/arkaplan.jpg'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tamamen kapla */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrar etme */
+    height: 100vh; /* Ekran yüksekliği kadar */
+    position: relative; /* Pozisyonu belirle */
+}
+
