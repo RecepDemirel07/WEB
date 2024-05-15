@@ -98,3 +98,7 @@ body {
     position: relative; /* Pozisyonu belirle */
 }
 
+.ytvideo {
+    margin: 0 auto; /* Sayfayı ortalama */
+    max-width: 600px; /* Video genişliği */
+}

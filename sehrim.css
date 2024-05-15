@@ -66,10 +66,159 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-.city-info h2{
-    text-align: center;
 
+.city-info-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto; /* Sayfa genişliğine göre ortalamak için */
+    max-width: 1200px; /* Konteynerın maksimum genişliği */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* İçerikleri merkeze hizalar */
 }
+
+.city-info-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.city-info-container h2 {
+    text-align: center;
+}
+
+/* Metin Container */
+.metin-container {
+    max-width: 800px; /* Metin container'ın maksimum genişliği */
+    margin: 20px auto; /* Sayfanın ortasına hizalama */
+    padding: 20px; /* İçerik etrafındaki boşluk */
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 5px; /* Köşelerin yuvarlaklığı */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* Başlık */
+.metin-container h3 {
+    color: #007bff; /* Başlık rengi */
+    margin-top: 20px; /* Üst boşluk */
+}
+
+/* Paragraflar */
+.metin-container p {
+    color: #666; /* Metin rengi */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
 nav ul li a i {
     margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
+}
+
+.carousel-item img {
+    max-width: 60%; /* Resimleri slider'ın genişliğine uyacak şekilde sınırlar */
+    height: 60%; /* Yüksekliği otomatik olarak ayarlar, oranı korur */
+    display: block; /* Resimleri blok elementi olarak görüntüler */
+    margin: 0 auto; /* Resimleri yatay olarak ortalar */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1; /* Oklar varsayılan olarak görünür olacak */
+}
+
+.carousel-indicators {
+    bottom: 10px; /* Gösterge noktalarını alt kenara biraz yaklaştırır */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Okların rengini ters çevirir */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Sol oku biraz daha sola kaydırır */
+    position: absolute; /* Pozisyonu mutlak olarak ayarlar */
+}
+
+.carousel-control-next {
+    right: 10px; /* Sağ oku biraz daha sağa kaydırır */
+    position: absolute; /* Pozisyonu mutlak olarak ayarlar */
+}
+
+.icon-container.city-info {
+    display: inline-block; /* Yatay olarak hizalamak için */
+    margin: 10px; /* İkon ve metin arasındaki boşluğu ayarlar */
+    margin-top: 30px; /* Yukarıdan 100 piksel mesafe bırak */
+    margin-bottom: 30px; /* Alttan 100 piksel mesafe bırak */
+    font-size: 24px; /* İkon boyutunu 24 piksel olarak ayarlar */
+}
+
+.icon-container.city-info i {
+    margin-right: 5px; /* İkon ile metin arasındaki mesafeyi ayarlar */
+    margin-top: 30px; /* Yukarıdan 100 piksel mesafe bırak */
+    margin-bottom: 30px; /* Alttan 100 piksel mesafe bırak */
+    font-size: 24px; /* İkon boyutunu 24 piksel olarak ayarlar */
+}
+
+.sports-container {
+    background-color: #f8f9fa;
+    margin-top: 100px; /* Yukarıdaki kutunun altına 20 piksel boşluk bırakma */
+    margin-bottom: 100px; /* Aşağıdaki kutunun üstüne 20 piksel boşluk bırakma */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px; /* Sayfanın genişliğine göre ayarlandı */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+
+.sports-container h2 {
+    text-align: center; /* Başlık ortalandı */
+}
+
+.sports-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex; /* Resimler yan yana gelecek şekilde düzenlendi */
+    flex-wrap: wrap; /* Eğer resimler sığmazsa alt satıra geçmesi sağlandı */
+    justify-content: space-around; /* Resimler yatay olarak ortaladı */
+}
+
+.sports-container li {
+    margin-bottom: 20px;
+    flex: 0 0 calc(33.33% - 20px); /* Her bir resmin genişliği eşit olacak şekilde ayarlandı */
+    max-width: calc(33.33% - 20px); /* Maksimum genişlik belirlendi */
+}
+
+.sports-container figure {
+    margin: 0;
+    text-align: center;
+}
+
+.sports-container img {
+    width: 100%; /* Resimler container'ın içinde tamamen geniş olacak */
+    max-width: 400px; /* Maksimum genişlik belirlendi */
+    height: auto;
+    border-radius: 10px;
+}
+
+.sports-container figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sports-container img {
+    width: 100%; /* Resimler container'ın içinde tamamen geniş olacak */
+    height: 300px; /* Tüm resimlerin yüksekliği 300 piksel olacak */
+    object-fit: cover; /* Resimlerin oranını korurken container'a sığmasını sağlar */
+    border-radius: 10px;
+}
+.ytvideo {
+    margin-top: 100px; /* Yukarıdan 100 piksel mesafe bırak */
+    margin-bottom: 100px; /* Alttan 100 piksel mesafe bırak */
+    margin-left: auto; /* Sayfayı yatayda ortalama */
+    margin-right: auto; /* Sayfayı yatayda ortalama */
+    max-width: 600px; /* Video genişliği */
+}
+.ytvideo h2{
+    margin-bottom: 30px; /* Alttan 30 piksel mesafe bırak */
 }
