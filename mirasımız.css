@@ -30,6 +30,9 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+nav ul li a:hover {
+    color: #ffcc00;
+}
 
 .heritage-info {
     margin: 20px;

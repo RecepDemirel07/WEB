@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="iletişim.css">
+    <title>İletişim Sayfası</title>
+</head>
+<body>
+
+    <header>
+        <h1>İletişim Sayfası</h1>
+        <nav>
+            <ul>
+                <li><a href="Anasayfa.html"><i class="fas fa-user"></i>Hakkımda</a></li>
+                <li><a href="cv.html"><i class="fas fa-file-alt"></i>Özgeçmişim</a></li>
+                <li><a href="sehrim.html"> <i class="fas fa-city"></i>Şehrim</a></li>
+                <li><a href="mirasımız.html"> <i class="fas fa-landmark"></i>Mirasımız</a></li>
+                <li><a href="ilgialanlarım.html"> <i class="fas fa-trophy"></i>İlgi Alanlarım</a></li>
+                <li><a href="iletişim.html"><i class="fas fa-phone-alt"></i>İletişim Sayfası</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="iletisim-formu" id="app">
+        <h2>İletişim Formu</h2>
+        <form @submit.prevent="validateVueForm" id="contactForm">
+            <div>
+                <label for="adSoyad">Ad Soyad:</label>
+                <input type="text" id="adSoyad" v-model="adSoyad" required>
+            </div>
+            <br><br>
+            <div>
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" v-model="gmail" required>
+            </div>
+            <br><br>
+            <div>
+                <label for="telefon">Telefon Numarası:</label>
+                <input type="tel" id="telefon" v-model="telefon" required>
+            </div>
+            <br><br>
+            <div>
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" v-model="mesaj" required></textarea>
+            </div>
+            <br><br>
+            <div>
+                <label for="il">İl:</label>
+                <select id="il" v-model="il" required>
+                    <option value="" disabled selected>İl seçiniz</option>
+                    <!-- İl seçenekleri buraya eklenebilir -->
+                </select>
+            </div>
+            <div>
+                <label>Cinsiyet:</label>
+                <input type="radio" id="erkek" name="cinsiyet" value="erkek" v-model="cinsiyet" required>
+                <label for="erkek">Erkek</label>
+                <input type="radio" id="bayan" name="cinsiyet" value="bayan" v-model="cinsiyet" required>
+                <label for="bayan">Bayan</label>
+            </div>
+            <div>
+                <label for="dosya">Dosya Yükle:</label>
+                <input type="file" id="dosya" @change="handleFileUpload" required>
+            </div>
+            
+    
+            <div>
+                <button type="button" @click="javascriptValidation">Javascript ile Kontrol</button><br><br>
+                <button type="button" @click="validateVueForm">Vue.js ile Kontrol ve Gönder</button><br><br>
+                <button type="button" @click="resetForm">Temizle</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="iletişim.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                adSoyad: '',
+                gmail: '',
+                telefon: '',
+                mesaj: '',
+                il: '',
+                cinsiyet: '',
+                dosya: null
+            },
+            methods: {
+                javascriptValidation: function() {
+                    if (this.adSoyad && this.gmail && this.telefon && this.mesaj && this.il && this.cinsiyet && this.dosya) {
+                        alert('Javascript ile form başarıyla doğrulandı.');
+                    } else {
+                        alert('Javascript ile lütfen tüm alanları doğru bir şekilde doldurunuz.');
+                    }
+                },
+                validateVueForm: function() {
+                    if (this.adSoyad && this.gmail && this.telefon && this.mesaj && this.il && this.cinsiyet && this.dosya) {
+                        alert('Vue.js ile form başarıyla gönderildi.');
+                    } else {
+                        alert('Vue.js ile lütfen tüm alanları doğru bir şekilde doldurunuz.');
+                    }
+                },
+                handleFileUpload: function(event) {
+                    this.dosya = event.target.files[0];
+                },
+                resetForm: function() {
+                    this.adSoyad = '';
+                    this.gmail = '';
+                    this.telefon = '';
+                    this.mesaj = '';
+                    this.il = '';
+                    this.cinsiyet = '';
+                    this.dosya = null;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

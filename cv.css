@@ -41,6 +41,9 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+nav ul li a:hover {
+    color: #ffcc00;
+}
 
 .navbar {
     background-color: #333;
@@ -85,4 +88,8 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+nav ul li a i {
+    margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
 }

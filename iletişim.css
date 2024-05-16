@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.iletisim-formu {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.iletisim-formu h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.iletisim-formu form div {
+    margin-bottom: 15px;
+}
+
+.iletisim-formu form label {
+    display: block;
+    font-weight: bold;
+}
+
+.iletisim-formu form input,
+.iletisim-formu form select,
+.iletisim-formu form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.iletisim-formu form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.iletisim-formu form button:hover {
+    background-color: #555;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* İstenilen boşluk miktarı */
+}
