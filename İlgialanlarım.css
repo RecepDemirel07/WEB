@@ -1,51 +1,104 @@
-/* Genel stil ayarları */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('Resimler/arkaplanfantastik.jpg'); /* Arka plan resminin dosya yolu */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Sayfayı kaydırdığınızda arka plan resminin sabit kalmasını sağlar */
 }
 
 header {
     background-color: #333;
-    color: #fff;
-    padding: 20px;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header h1 {
     margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
-
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    font-size: 18px;
 }
 nav ul li a i {
     margin-right: 5px; /* İkon ile yazı arasındaki mesafeyi ayarlar */
 }
 
-nav ul li a:hover {
-    color: #ffcc00;
+.title-box {
+    background-color: #af9335e1;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Ortalamak için */
+    align-items: center; /* Ortalamak için */
+    text-align: center;
+}
+
+.title-box h2 {
+    font-size: 36px; /* Daha büyük bir boyut için */
+    margin: 0;
+    color: #333;
 }
 
 .my-info {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#moviePosters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie {
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
 }

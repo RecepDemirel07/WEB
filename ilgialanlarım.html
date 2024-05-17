@@ -16,19 +16,70 @@
                 <li><a href="cv.html"><i class="fas fa-file-alt"></i>Özgeçmişim</a></li>
                 <li><a href="sehrim.html"> <i class="fas fa-city"></i>Şehrim</a></li>
                 <li><a href="mirasımız.html"> <i class="fas fa-landmark"></i>Mirasımız</a></li>
-                <li><a href="ilgialanlarım.html"> <i class="fas fa-trophy"></i>İlgi Alanlarım</a></li>
+                <li><a href="ilgialanlarım.html"><i class="fas fa-clapperboard"></i>İlgi Alanlarım</a></li>
                 <li><a href="iletişim.html"><i class="fas fa-phone-alt"></i>İletişim Sayfası</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="my-info">
-        <h2>İlgi Alanlarım</h2>
-        <!-- Takım bilgileri buraya gelecek -->
+        <div class="title-box">
+            <h2>İlgi Alanlarım</h2>
+        </div>
+        <br><br><br>
+        <div id="moviePosters"></div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Benim Web Sitem</p>
-    </footer>
+   
+
+    <script>
+        // TMDB API anahtarı
+        const apiKey = '791981b4f85714060c6b6110701f4fe9';
+        
+        // Filmlerin ID'leri ve özetlerini içeren nesneler dizisi
+        const movies = [
+            { id: 120, title: 'The Lord of the Rings: The Fellowship of the Ring' },
+            { id: 121, title: 'The Lord of the Rings: The Two Towers' },
+            { id: 122, title: 'The Lord of the Rings: The Return of the King' },
+            { id: 11, title: 'Star Wars: A New Hope' },
+            { id: 140607, title: 'Star Wars: The Force Awakens' },
+            { id: 671, title: 'Harry Potter and the Philosopher\'s Stone' },
+            { id: 672, title: 'Harry Potter and the Chamber of Secrets' },
+            { id: 673, title: 'Harry Potter and the Prisoner of Azkaban' }
+        ];
+        
+        // Posterlerin ve özetlerin gösterileceği div
+        const moviePostersDiv = document.getElementById('moviePosters');
+        
+        // Her film için poster ve özet almak için API isteği yapma fonksiyonu
+        function getMovieDetails(movie) {
+            fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=en-US`)
+            .then(response => response.json())
+            .then(data => {
+                const posterPath = data.poster_path;
+                const posterUrl = `https://image.tmdb.org/t/p/w500${posterPath}`;
+                const overview = data.overview;
+                
+                // Posterleri ve özetleri görüntüleme
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('movie');
+                movieDiv.innerHTML = `
+                    <h3>${movie.title}</h3>
+                    <img src="${posterUrl}" alt="${movie.title} poster">
+                    <p>${overview}</p>
+                `;
+                moviePostersDiv.appendChild(movieDiv);
+            })
+            .catch(error => {
+                console.error('Error fetching movie details:', error);
+            });
+        }
+        
+        // Her film için poster ve özet almak için fonksiyonu çağırma
+        movies.forEach(movie => {
+            getMovieDetails(movie);
+        });
+    </script>
+
 </body>
 </html>
